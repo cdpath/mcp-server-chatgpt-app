@@ -1,12 +1,11 @@
 # mcp-server-chatgpt-app
 
-## Prerequisite
+## prerequisite
 
 - [ChatGPT macOS app](https://openai.com/chatgpt/download/)
-- [uv](https://docs.astral.sh/uv/getting-started/installation/)
-- Install the ["Ask ChatGPT on Mac" shortcuts](https://www.icloud.com/shortcuts/6ae86a39a31e4ec5938abad953ecfd64)
+- Install the ["Ask ChatGPT on Mac" shortcut](https://www.icloud.com/shortcuts/6ae86a39a31e4ec5938abad953ecfd64)
 
-## Usage
+## usage
 
 ### cursor
 
@@ -16,8 +15,8 @@ update `.mcp.json` to add the following:
 {
     "mcpServers": {
       "chatgpt": {
-        "command": "uvx",
-        "args": ["mcp-server-chatgpt-app"],
+        "command": "/path/to/mcp-server-chatgpt-app-darwin-arm64",
+        "args": [],
         "env": {},
         "disabled": false,
         "autoApprove": []
@@ -26,6 +25,13 @@ update `.mcp.json` to add the following:
 }
 ```
 
+### claude desktop
+
+1. Download `mcp-server-chatgpt-app.dxt` from releases
+2. Double click the `.dxt` file to install in Claude Desktop
+3. `chmod +x ~/Library/Application\ Support/Claude/Claude\ Extensions/local.dxt.cdpath.mcp-server-chatgpt-app/mcp-server-chatgpt-app-darwin-arm64`
+
+
 ### chatwise
 
 Go to Settings -> Tools -> Add and use the following config:
@@ -33,11 +39,30 @@ Go to Settings -> Tools -> Add and use the following config:
 ```
 Type: stdio
 ID: ChatGPT
-Command: uvx mcp-server-chatgpt-app
+Command: /path/to/mcp-server-chatgpt-app-darwin-arm64
 ```
 
-## local development
+
+## development
+
+### build
 
 ```
-uv --directory $HOME/Developer/mcp-server-chatgpt-app/src/mcp_server_chatgpt run server.py
+make build
 ```
+
+### run from source
+
+```
+make run
+```
+
+### available commands
+
+```
+make help
+```
+
+## Available Tools
+
+- **`ask_chatgpt`**: Send a prompt to ChatGPT macOS app

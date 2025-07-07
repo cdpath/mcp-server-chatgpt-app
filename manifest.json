@@ -1,0 +1,36 @@
+{
+  "dxt_version": "0.1",
+  "name": "mcp-server-chatgpt-app",
+  "version": "0.1.5",
+  "description": "MCP server for ChatGPT app",
+  "author": {
+    "name": "cdpath",
+    "email": "cdpath@outlook.com",
+    "url": "https://github.com/cdpath"
+  },
+  "homepage": "https://github.com/cdpath/mcp-server-chatgpt-app",
+  "documentation": "https://github.com/cdpath/mcp-server-chatgpt-app",
+  "support": "https://github.com/cdpath/mcp-server-chatgpt-app/issues",
+  "icon": "icon.png",
+  "server": {
+    "type": "binary",
+    "entry_point": "mcp-server-chatgpt-app-darwin-arm64",
+    "mcp_config": {
+      "command": "${__dirname}/mcp-server-chatgpt-app-darwin-arm64",
+      "args": [],
+      "env": {}
+    }
+  },
+  "tools": [
+    {
+      "name": "ask_chatgpt",
+      "description": "Send a prompt to ChatGPT macOS app using Shortcuts"
+    }
+  ],
+  "keywords": [
+    "ChatGPT",
+    "macOS",
+    "shortcuts"
+  ],
+  "license": "MIT"
+}

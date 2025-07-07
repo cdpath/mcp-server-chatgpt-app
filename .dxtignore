@@ -1,0 +1,22 @@
+# Go source files and modules (only keep the final binary)
+cmd/
+internal/
+*.go
+go.mod
+go.sum
+Makefile
+
+# Git and development files
+.git/
+.github/
+.gitignore
+
+# DXT pack output
+*.dxt
+
+# Keep only essential files:
+# - manifest.json (required)
+# - mcp-server-chatgpt-app-darwin-arm64 (our binary)
+# - icon.png (required)
+# - LICENSE (good practice)
+# - README.md (optional but good for documentation) 
