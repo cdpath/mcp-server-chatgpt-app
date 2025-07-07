@@ -29,7 +29,7 @@ update `.mcp.json` to add the following:
 
 1. Download `mcp-server-chatgpt-app.dxt` from releases
 2. Double click the `.dxt` file to install in Claude Desktop
-3. `chmod +x ~/Library/Application\ Support/Claude/Claude\ Extensions/local.dxt.cdpath.mcp-server-chatgpt-app/mcp-server-chatgpt-app-darwin-arm64`
+3. `chmod +x ~/Library/Application\ Support/Claude/Claude\ Extensions/local.dxt.cdpath.mcp-server-chatgpt-app/mcp-server-chatgpt-app-darwin-arm64` (See https://github.com/anthropics/dxt/issues/13)
 
 
 ### chatwise
